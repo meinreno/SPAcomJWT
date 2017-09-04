@@ -1,0 +1,19 @@
+<div>
+    <h1>Produtos</h1>
+   
+    <table>
+      <thead>
+        <tr>
+          <th>Descricao</th>
+          <th>Preço</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="item in itens">
+          <td><strong>{{ item.descricao }}</strong></td>
+          <td>{{ item.preco }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+</div>

@@ -1,0 +1,22 @@
+var app = angular.module('app', []);
+
+app.controller('EntrarSistema', )
+
+function EntrarSistema($scope,$http){
+
+    $scope.realizarLogin = function () {
+        $http({method: 'POST', 
+            url:'http://localhost:5000/login', 
+            data: $scope.formLogin,
+            headers: {'Content-Type': 'application/json'}})
+        .then(function(response){
+             //your code in case the post succeeds
+             
+             console.log(response);
+         })
+        .catch(function(err){
+             //your code in case your post fails
+             console.log(err);
+         });
+    };
+};
